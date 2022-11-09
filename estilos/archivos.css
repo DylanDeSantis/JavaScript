@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+.containerProductos{
+    border: solid 5px black;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.containerProductos div{
+    border: solid 2px black;
+    margin: 25px 10px 25px 10px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos/archivos.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script defer src="js/variables.js"></script>
+  <script defer src="js/conecciones.js"></script>
+  <script defer src="js/productos.js"></script>
+  <script defer src="js/listaProductos.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div class="elHeader">
+      <div class="headerDePagina">
+        <img src="./archivos html/maxim-logo.png" alt="logo pagina">
+        <div class="header">
+          <input type="text" id="formulario" class="cajaBuscador">
+          <button class="botonBuscador" id="botonDelBuscador">Buscar</button>
+          <ul id="resultado">
+          </ul>
+        </div>
+        </nav>
+      </div>
+      <div>
+        <a class="registro" href="./secciones/registro.html">registrate</a>
+      </div>
+      <div class="carritoDeCompra">
+        <img src="./archivos html/carro.png" alt="foto carrito compra">
+        <p>carrito de compra</p>
+      </div>
+    </div>
+  </header>
+  <section>
+    <h1 id="titulo" class="separadores"></h1>
+    <div id="contenedorProductos" class="containerProductos">
+      <div class="card-button"></div>
+      <button class="button button-outline button-add" id="idUnico"
+        title="Pulsa para agregar al carrito">Agregar</button>
+    </div>
+  </section>
+</body>
+
+</html>
