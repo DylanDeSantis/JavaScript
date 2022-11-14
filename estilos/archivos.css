@@ -3,15 +3,309 @@
     padding: 0;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
-.containerProductos{
-    border: solid 5px black;
+.elHeader{
+    width: 99%;
+    margin: 0px 5px 5px 5px;
     display: flex;
-    flex-direction:row;
-    align-items: center;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(255, 179, 135);
+    border: 1px solid black;
+    border-radius: 30px;
 }
-.containerProductos div{
-    border: solid 2px black;
-    margin: 25px 10px 25px 10px;
+.carritoDeCompra{
+    margin: 0px 20px 0px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: end;
+}
+.wallet{
+    margin: 0px 10px 0px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.wallet img{
+    width: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.nuevaCuenta{
+    margin: 8px 0px 5px 20px;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+.nuevaCuenta img{
+    width: 40px;
+    margin: 0px 8px 0px 0px;
+}
+.registro{
+    text-decoration: none;
+    background-color: rgb(255, 179, 135);
+    margin: 0px 10px 0px 0px;
+    padding: 3px 3px 3px 3px;
+    color: black;
+    font-size: 15px;
+    border: 3px solid black;
+    border-radius: 15px;
+    transition-duration: 0.4s;
+}
+.registro:hover{
+    background-color: rgb(236, 236, 236);
+    color: rgb(0, 0, 0);
+}
+.imagenProd{
+    width: 100px;
+    background-color: rgb(213, 213, 213);
+    border-radius: 10px;
+    margin: 15px 0px 15px 0px;
+}
+.containerProductos{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    margin: 20px 0px 0px 0px;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 10px 10px 10px 10px;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+.card:hover{
+    margin: 10px 10px 10px 10px;
+    border: 3px black solid;
+    border-radius: 10px;
+    transform: 0.5s;
+}
+.card-button{
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin: 5px 5px 5px 5px;
+    padding: 2px 2px 2px 2px;
+    transition-duration: 0.4s;
+    background-color: rgb(255, 179, 135);
+}
+.card-button:hover{
+    background-color: rgb(236, 236, 236);
+    color: rgb(0, 0, 0);
+}
+.buy{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: rgb(255, 179, 135);
+    box-shadow: -2px 0px 4px;
+    transition: 0.3s;
+}
+.buy.active{
+right: 0;
+}
+.imagenCarrito{
+   width: 100px; 
+   height: 100px;
+   object-fit: contain;
+   padding: 10px;
+}
+.carritoTitulo{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.boxContenido{
+    display: grid;
+    row-gap: 0.5rem;
+}
+.carritoProdTitulo{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.carritoPrecio{
+    font-weight: bolder;
+}
+.cantidadProd{
+    border: 1px solid black;
+    outline-color: rgb(0, 0, 0);
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+.removerCarrito{
+    font-size: 24px;
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+}
+.totalCarrito{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px 10px 0px;
+    border-top: 1px solid black;
+}
+.inforCarrito{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.totalProductos{
+    font-size: 1rem;
+    font-weight: bolder;
+    margin: 5px 5px 5px 5px;
+}
+.totalPrecio{
+    margin: 5px 5px 5px 5px;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+.btnBuy{
+    display: flex;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(255, 56, 56);
+    color: black;
+    font-size: 1rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#cerrarCarrito{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+}
+.btnBuy:hover{
+    background-color: rgb(236, 236, 236);
+    color: rgb(0, 0, 0);
+}
+.carritoBox{
+    display: grid;
+    grid-template-columns: 32% 50% 10%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.tituloMercaderia{
+    font-style: italic;
+    font-size: 1.0rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: 5px 0px 0px 0px
+}
+.preciosProductos{
+    font-size: 1.1rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+.buscadorProductos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px 0px 0px;
+}
+.cajaBuscador{
+    margin: 0px 10px 0px 0px;
+    padding: 5px 5px 5px 5px;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: medium;
+    font-style: inherit;
+}
+.botonBuscador{
+    padding: 5px 5px 5px 5px;
+    transition-duration: 0.4s;
+    background-color: rgb(255, 179, 135);
+    border: 1px solid black;
+    border-radius: 8px;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.home{
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bolder;
+    font-style: italic;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0px -10px 0px;
+}
+.formulario{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 400px;
+    margin: 30px 50px 0px 50px;
+    padding: 10px 10px;
+    font-weight: bolder;
+    box-shadow: 7px 13px 37px black;  
+    border-radius: 1rem;
+    background-color: rgb(0, 144, 187);
+}
+.form{
+    display: flex;
+    align-items: center;   
+}
+.textoContacto{
+    font-weight: bolder;
+    font-size: x-large;
+}
+div .logoForm{
+    width: 100px;
+    overflow: hidden;
+    margin-left: -5px;
+}
+.contacto input{
+    width: 98%;
+    margin: 20px 0px 20px 0px;
+    padding: 3px 3px 3px 3px;
+    transition-duration: 0.4s;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 8px;
+
+}
+.enviar{
+    width: 100%;
+    margin: 20px 0px 20px 0px;
+    padding: 3px 0px 3px 0px;
+    transition-duration: 0.4s;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 8px;
 }

@@ -12,5 +12,3 @@ const recuperarDatos = () => {
     if (localStorage.getItem("inputEmail")) { inputEmail.value = localStorage.getItem("inputEmail")}
     if (localStorage.getItem("inputTelefono")) { inputTelefono.value = localStorage.getItem("inputTelefono")}
 }
-btnEnviar.addEventListener("click", almacenarDatos)
-document.addEventListener("DOMContentLoaded", recuperarDatos)
